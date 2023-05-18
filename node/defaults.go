@@ -22,9 +22,9 @@ import (
 	"path/filepath"
 	"runtime"
 
-	"github.com/Fantom-foundation/go-ethereum/p2p"
-	"github.com/Fantom-foundation/go-ethereum/p2p/nat"
-	"github.com/Fantom-foundation/go-ethereum/rpc"
+	"github.com/Nova-foundation/go-ethereum/p2p"
+	"github.com/Nova-foundation/go-ethereum/p2p/nat"
+	"github.com/Nova-foundation/go-ethereum/rpc"
 )
 
 const (

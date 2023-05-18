@@ -20,12 +20,12 @@ import (
 	"path/filepath"
 	"reflect"
 
-	"github.com/Fantom-foundation/go-ethereum/accounts"
-	"github.com/Fantom-foundation/go-ethereum/core/rawdb"
-	"github.com/Fantom-foundation/go-ethereum/ethdb"
-	"github.com/Fantom-foundation/go-ethereum/event"
-	"github.com/Fantom-foundation/go-ethereum/p2p"
-	"github.com/Fantom-foundation/go-ethereum/rpc"
+	"github.com/Nova-foundation/go-ethereum/accounts"
+	"github.com/Nova-foundation/go-ethereum/core/rawdb"
+	"github.com/Nova-foundation/go-ethereum/ethdb"
+	"github.com/Nova-foundation/go-ethereum/event"
+	"github.com/Nova-foundation/go-ethereum/p2p"
+	"github.com/Nova-foundation/go-ethereum/rpc"
 )
 
 // ServiceContext is a collection of service independent options inherited from

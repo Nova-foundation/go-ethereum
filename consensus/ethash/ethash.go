@@ -33,13 +33,13 @@ import (
 	"time"
 	"unsafe"
 
+	"github.com/Nova-foundation/go-ethereum/common"
+	"github.com/Nova-foundation/go-ethereum/consensus"
+	"github.com/Nova-foundation/go-ethereum/core/types"
+	"github.com/Nova-foundation/go-ethereum/log"
+	"github.com/Nova-foundation/go-ethereum/metrics"
+	"github.com/Nova-foundation/go-ethereum/rpc"
 	mmap "github.com/edsrzf/mmap-go"
-	"github.com/Fantom-foundation/go-ethereum/common"
-	"github.com/Fantom-foundation/go-ethereum/consensus"
-	"github.com/Fantom-foundation/go-ethereum/core/types"
-	"github.com/Fantom-foundation/go-ethereum/log"
-	"github.com/Fantom-foundation/go-ethereum/metrics"
-	"github.com/Fantom-foundation/go-ethereum/rpc"
 	"github.com/hashicorp/golang-lru/simplelru"
 )
 

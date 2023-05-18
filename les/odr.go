@@ -20,11 +20,11 @@ import (
 	"context"
 	"time"
 
-	"github.com/Fantom-foundation/go-ethereum/common/mclock"
-	"github.com/Fantom-foundation/go-ethereum/core"
-	"github.com/Fantom-foundation/go-ethereum/ethdb"
-	"github.com/Fantom-foundation/go-ethereum/light"
-	"github.com/Fantom-foundation/go-ethereum/log"
+	"github.com/Nova-foundation/go-ethereum/common/mclock"
+	"github.com/Nova-foundation/go-ethereum/core"
+	"github.com/Nova-foundation/go-ethereum/ethdb"
+	"github.com/Nova-foundation/go-ethereum/light"
+	"github.com/Nova-foundation/go-ethereum/log"
 )
 
 // LesOdr implements light.OdrBackend

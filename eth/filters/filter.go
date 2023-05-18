@@ -21,13 +21,13 @@ import (
 	"errors"
 	"math/big"
 
-	"github.com/Fantom-foundation/go-ethereum/common"
-	"github.com/Fantom-foundation/go-ethereum/core"
-	"github.com/Fantom-foundation/go-ethereum/core/bloombits"
-	"github.com/Fantom-foundation/go-ethereum/core/types"
-	"github.com/Fantom-foundation/go-ethereum/ethdb"
-	"github.com/Fantom-foundation/go-ethereum/event"
-	"github.com/Fantom-foundation/go-ethereum/rpc"
+	"github.com/Nova-foundation/go-ethereum/common"
+	"github.com/Nova-foundation/go-ethereum/core"
+	"github.com/Nova-foundation/go-ethereum/core/bloombits"
+	"github.com/Nova-foundation/go-ethereum/core/types"
+	"github.com/Nova-foundation/go-ethereum/ethdb"
+	"github.com/Nova-foundation/go-ethereum/event"
+	"github.com/Nova-foundation/go-ethereum/rpc"
 )
 
 type Backend interface {

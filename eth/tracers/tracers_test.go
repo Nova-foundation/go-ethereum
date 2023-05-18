@@ -27,17 +27,17 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/Fantom-foundation/go-ethereum/common"
-	"github.com/Fantom-foundation/go-ethereum/common/hexutil"
-	"github.com/Fantom-foundation/go-ethereum/common/math"
-	"github.com/Fantom-foundation/go-ethereum/core"
-	"github.com/Fantom-foundation/go-ethereum/core/rawdb"
-	"github.com/Fantom-foundation/go-ethereum/core/types"
-	"github.com/Fantom-foundation/go-ethereum/core/vm"
-	"github.com/Fantom-foundation/go-ethereum/crypto"
-	"github.com/Fantom-foundation/go-ethereum/params"
-	"github.com/Fantom-foundation/go-ethereum/rlp"
-	"github.com/Fantom-foundation/go-ethereum/tests"
+	"github.com/Nova-foundation/go-ethereum/common"
+	"github.com/Nova-foundation/go-ethereum/common/hexutil"
+	"github.com/Nova-foundation/go-ethereum/common/math"
+	"github.com/Nova-foundation/go-ethereum/core"
+	"github.com/Nova-foundation/go-ethereum/core/rawdb"
+	"github.com/Nova-foundation/go-ethereum/core/types"
+	"github.com/Nova-foundation/go-ethereum/core/vm"
+	"github.com/Nova-foundation/go-ethereum/crypto"
+	"github.com/Nova-foundation/go-ethereum/params"
+	"github.com/Nova-foundation/go-ethereum/rlp"
+	"github.com/Nova-foundation/go-ethereum/tests"
 )
 
 // To generate a new callTracer test, copy paste the makeTest method below into

@@ -20,8 +20,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/Fantom-foundation/go-ethereum/common"
-	"github.com/Fantom-foundation/go-ethereum/crypto"
+	"github.com/Nova-foundation/go-ethereum/common"
+	"github.com/Nova-foundation/go-ethereum/crypto"
 )
 
 // Event is an event potentially triggered by the EVM's LOG mechanism. The Event
@@ -59,7 +59,7 @@ func (e Event) String() string {
 //
 // Example
 //
-//     event foo(uint32 a, int b) = "foo(uint32,int256)"
+//	event foo(uint32 a, int b) = "foo(uint32,int256)"
 //
 // Please note that "int" is substitute for its canonical representation "int256"
 func (e Event) Sig() string {

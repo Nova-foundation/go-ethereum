@@ -31,7 +31,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/Fantom-foundation/go-ethereum/params"
+	"github.com/Nova-foundation/go-ethereum/params"
 )
 
 // Command line flags to configure the interpreters.

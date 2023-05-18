@@ -22,9 +22,9 @@ import (
 	"reflect"
 	"testing"
 
+	"github.com/Nova-foundation/go-ethereum/common"
+	"github.com/Nova-foundation/go-ethereum/common/hexutil"
 	"github.com/davecgh/go-spew/spew"
-	"github.com/Fantom-foundation/go-ethereum/common"
-	"github.com/Fantom-foundation/go-ethereum/common/hexutil"
 )
 
 var unmarshalLogTests = map[string]struct {

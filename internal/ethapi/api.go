@@ -25,25 +25,25 @@ import (
 	"strings"
 	"time"
 
+	"github.com/Nova-foundation/go-ethereum/accounts"
+	"github.com/Nova-foundation/go-ethereum/accounts/keystore"
+	"github.com/Nova-foundation/go-ethereum/accounts/scwallet"
+	"github.com/Nova-foundation/go-ethereum/common"
+	"github.com/Nova-foundation/go-ethereum/common/hexutil"
+	"github.com/Nova-foundation/go-ethereum/common/math"
+	"github.com/Nova-foundation/go-ethereum/consensus/clique"
+	"github.com/Nova-foundation/go-ethereum/consensus/ethash"
+	"github.com/Nova-foundation/go-ethereum/core"
+	"github.com/Nova-foundation/go-ethereum/core/rawdb"
+	"github.com/Nova-foundation/go-ethereum/core/types"
+	"github.com/Nova-foundation/go-ethereum/core/vm"
+	"github.com/Nova-foundation/go-ethereum/crypto"
+	"github.com/Nova-foundation/go-ethereum/log"
+	"github.com/Nova-foundation/go-ethereum/p2p"
+	"github.com/Nova-foundation/go-ethereum/params"
+	"github.com/Nova-foundation/go-ethereum/rlp"
+	"github.com/Nova-foundation/go-ethereum/rpc"
 	"github.com/davecgh/go-spew/spew"
-	"github.com/Fantom-foundation/go-ethereum/accounts"
-	"github.com/Fantom-foundation/go-ethereum/accounts/keystore"
-	"github.com/Fantom-foundation/go-ethereum/accounts/scwallet"
-	"github.com/Fantom-foundation/go-ethereum/common"
-	"github.com/Fantom-foundation/go-ethereum/common/hexutil"
-	"github.com/Fantom-foundation/go-ethereum/common/math"
-	"github.com/Fantom-foundation/go-ethereum/consensus/clique"
-	"github.com/Fantom-foundation/go-ethereum/consensus/ethash"
-	"github.com/Fantom-foundation/go-ethereum/core"
-	"github.com/Fantom-foundation/go-ethereum/core/rawdb"
-	"github.com/Fantom-foundation/go-ethereum/core/types"
-	"github.com/Fantom-foundation/go-ethereum/core/vm"
-	"github.com/Fantom-foundation/go-ethereum/crypto"
-	"github.com/Fantom-foundation/go-ethereum/log"
-	"github.com/Fantom-foundation/go-ethereum/p2p"
-	"github.com/Fantom-foundation/go-ethereum/params"
-	"github.com/Fantom-foundation/go-ethereum/rlp"
-	"github.com/Fantom-foundation/go-ethereum/rpc"
 	"github.com/tyler-smith/go-bip39"
 )
 
@@ -412,7 +412,7 @@ func (s *PrivateAccountAPI) SignTransaction(ctx context.Context, args SendTxArgs
 //
 // The key used to calculate the signature is decrypted with the given password.
 //
-// https://github.com/Fantom-foundation/go-ethereum/wiki/Management-APIs#personal_sign
+// https://github.com/Nova-foundation/go-ethereum/wiki/Management-APIs#personal_sign
 func (s *PrivateAccountAPI) Sign(ctx context.Context, data hexutil.Bytes, addr common.Address, passwd string) (hexutil.Bytes, error) {
 	// Look up the wallet containing the requested signer
 	account := accounts.Account{Address: addr}
@@ -440,7 +440,7 @@ func (s *PrivateAccountAPI) Sign(ctx context.Context, data hexutil.Bytes, addr c
 // Note, the signature must conform to the secp256k1 curve R, S and V values, where
 // the V value must be 27 or 28 for legacy reasons.
 //
-// https://github.com/Fantom-foundation/go-ethereum/wiki/Management-APIs#personal_ecRecover
+// https://github.com/Nova-foundation/go-ethereum/wiki/Management-APIs#personal_ecRecover
 func (s *PrivateAccountAPI) EcRecover(ctx context.Context, data, sig hexutil.Bytes) (common.Address, error) {
 	if len(sig) != crypto.SignatureLength {
 		return common.Address{}, fmt.Errorf("signature must be %d bytes long", crypto.SignatureLength)
@@ -632,10 +632,10 @@ func (s *PublicBlockChainAPI) GetHeaderByHash(ctx context.Context, hash common.H
 }
 
 // GetBlockByNumber returns the requested canonical block.
-// * When blockNr is -1 the chain head is returned.
-// * When blockNr is -2 the pending chain head is returned.
-// * When fullTx is true all transactions in the block are returned, otherwise
-//   only the transaction hash is returned.
+//   - When blockNr is -1 the chain head is returned.
+//   - When blockNr is -2 the pending chain head is returned.
+//   - When fullTx is true all transactions in the block are returned, otherwise
+//     only the transaction hash is returned.
 func (s *PublicBlockChainAPI) GetBlockByNumber(ctx context.Context, number rpc.BlockNumber, fullTx bool) (map[string]interface{}, error) {
 	block, err := s.b.BlockByNumber(ctx, number)
 	if block != nil && err == nil {

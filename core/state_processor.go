@@ -17,14 +17,14 @@
 package core
 
 import (
-	"github.com/Fantom-foundation/go-ethereum/common"
-	"github.com/Fantom-foundation/go-ethereum/consensus"
-	"github.com/Fantom-foundation/go-ethereum/consensus/misc"
-	"github.com/Fantom-foundation/go-ethereum/core/state"
-	"github.com/Fantom-foundation/go-ethereum/core/types"
-	"github.com/Fantom-foundation/go-ethereum/core/vm"
-	"github.com/Fantom-foundation/go-ethereum/crypto"
-	"github.com/Fantom-foundation/go-ethereum/params"
+	"github.com/Nova-foundation/go-ethereum/common"
+	"github.com/Nova-foundation/go-ethereum/consensus"
+	"github.com/Nova-foundation/go-ethereum/consensus/misc"
+	"github.com/Nova-foundation/go-ethereum/core/state"
+	"github.com/Nova-foundation/go-ethereum/core/types"
+	"github.com/Nova-foundation/go-ethereum/core/vm"
+	"github.com/Nova-foundation/go-ethereum/crypto"
+	"github.com/Nova-foundation/go-ethereum/params"
 )
 
 // StateProcessor is a basic Processor, which takes care of transitioning

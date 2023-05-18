@@ -23,8 +23,8 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/Nova-foundation/go-ethereum/core"
 	"github.com/davecgh/go-spew/spew"
-	"github.com/Fantom-foundation/go-ethereum/core"
 )
 
 // Tests the go-ethereum to Aleth chainspec conversion for the Stureby testnet.

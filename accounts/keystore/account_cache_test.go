@@ -27,10 +27,10 @@ import (
 	"testing"
 	"time"
 
+	"github.com/Nova-foundation/go-ethereum/accounts"
+	"github.com/Nova-foundation/go-ethereum/common"
 	"github.com/cespare/cp"
 	"github.com/davecgh/go-spew/spew"
-	"github.com/Fantom-foundation/go-ethereum/accounts"
-	"github.com/Fantom-foundation/go-ethereum/common"
 )
 
 var (

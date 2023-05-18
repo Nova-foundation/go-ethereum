@@ -22,7 +22,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/Fantom-foundation/go-ethereum/metrics"
+	"github.com/Nova-foundation/go-ethereum/metrics"
 )
 
 var (

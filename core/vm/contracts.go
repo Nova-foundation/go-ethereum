@@ -22,12 +22,12 @@ import (
 	"errors"
 	"math/big"
 
-	"github.com/Fantom-foundation/go-ethereum/common"
-	"github.com/Fantom-foundation/go-ethereum/common/math"
-	"github.com/Fantom-foundation/go-ethereum/crypto"
-	"github.com/Fantom-foundation/go-ethereum/crypto/blake2b"
-	"github.com/Fantom-foundation/go-ethereum/crypto/bn256"
-	"github.com/Fantom-foundation/go-ethereum/params"
+	"github.com/Nova-foundation/go-ethereum/common"
+	"github.com/Nova-foundation/go-ethereum/common/math"
+	"github.com/Nova-foundation/go-ethereum/crypto"
+	"github.com/Nova-foundation/go-ethereum/crypto/blake2b"
+	"github.com/Nova-foundation/go-ethereum/crypto/bn256"
+	"github.com/Nova-foundation/go-ethereum/params"
 	"golang.org/x/crypto/ripemd160"
 )
 

@@ -22,7 +22,7 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/Fantom-foundation/go-ethereum/log"
+	"github.com/Nova-foundation/go-ethereum/log"
 )
 
 func init() {

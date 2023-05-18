@@ -20,8 +20,8 @@ import (
 	"hash"
 	"sync"
 
-	"github.com/Fantom-foundation/go-ethereum/common"
-	"github.com/Fantom-foundation/go-ethereum/rlp"
+	"github.com/Nova-foundation/go-ethereum/common"
+	"github.com/Nova-foundation/go-ethereum/rlp"
 	"golang.org/x/crypto/sha3"
 )
 

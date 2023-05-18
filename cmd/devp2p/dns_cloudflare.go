@@ -20,9 +20,9 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/Nova-foundation/go-ethereum/log"
+	"github.com/Nova-foundation/go-ethereum/p2p/dnsdisc"
 	"github.com/cloudflare/cloudflare-go"
-	"github.com/Fantom-foundation/go-ethereum/log"
-	"github.com/Fantom-foundation/go-ethereum/p2p/dnsdisc"
 	"gopkg.in/urfave/cli.v1"
 )
 

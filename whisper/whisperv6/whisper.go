@@ -26,13 +26,13 @@ import (
 	"sync"
 	"time"
 
+	"github.com/Nova-foundation/go-ethereum/common"
+	"github.com/Nova-foundation/go-ethereum/crypto"
+	"github.com/Nova-foundation/go-ethereum/log"
+	"github.com/Nova-foundation/go-ethereum/p2p"
+	"github.com/Nova-foundation/go-ethereum/rlp"
+	"github.com/Nova-foundation/go-ethereum/rpc"
 	mapset "github.com/deckarep/golang-set"
-	"github.com/Fantom-foundation/go-ethereum/common"
-	"github.com/Fantom-foundation/go-ethereum/crypto"
-	"github.com/Fantom-foundation/go-ethereum/log"
-	"github.com/Fantom-foundation/go-ethereum/p2p"
-	"github.com/Fantom-foundation/go-ethereum/rlp"
-	"github.com/Fantom-foundation/go-ethereum/rpc"
 	"github.com/syndtr/goleveldb/leveldb/errors"
 	"golang.org/x/crypto/pbkdf2"
 	"golang.org/x/sync/syncmap"
@@ -277,12 +277,12 @@ func (whisper *Whisper) SetMinimumPowTest(val float64) {
 	whisper.settings.Store(minPowToleranceIdx, val)
 }
 
-//SetLightClientMode makes node light client (does not forward any messages)
+// SetLightClientMode makes node light client (does not forward any messages)
 func (whisper *Whisper) SetLightClientMode(v bool) {
 	whisper.settings.Store(lightClientModeIdx, v)
 }
 
-//LightClientMode indicates is this node is light client (does not forward any messages)
+// LightClientMode indicates is this node is light client (does not forward any messages)
 func (whisper *Whisper) LightClientMode() bool {
 	val, exist := whisper.settings.Load(lightClientModeIdx)
 	if !exist || val == nil {
@@ -292,7 +292,7 @@ func (whisper *Whisper) LightClientMode() bool {
 	return v && ok
 }
 
-//LightClientModeConnectionRestricted indicates that connection to light client in light client mode not allowed
+// LightClientModeConnectionRestricted indicates that connection to light client in light client mode not allowed
 func (whisper *Whisper) LightClientModeConnectionRestricted() bool {
 	val, exist := whisper.settings.Load(restrictConnectionBetweenLightClientsIdx)
 	if !exist || val == nil {

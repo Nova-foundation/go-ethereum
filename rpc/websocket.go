@@ -26,8 +26,8 @@ import (
 	"strings"
 	"sync"
 
+	"github.com/Nova-foundation/go-ethereum/log"
 	mapset "github.com/deckarep/golang-set"
-	"github.com/Fantom-foundation/go-ethereum/log"
 	"github.com/gorilla/websocket"
 )
 
